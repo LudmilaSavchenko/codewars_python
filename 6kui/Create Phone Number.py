@@ -11,7 +11,14 @@ The returned format must be correct in order to complete this challenge.
 Don't forget the space after the closing parentheses!
 """
 
+"""
+#var1
 def create_phone_number(n):
     n = [str(i) for i in n]
     answer = f"({''.join(n[:3])}) {''.join(n[3:6])}-{''.join(n[6:])}"
     return answer
+"""
+
+def create_phone_number(n):
+    n = ''.join(map(str,n))
+    answer = f"({n[:3]}) {n[3:6]}-{n[6:]}"
