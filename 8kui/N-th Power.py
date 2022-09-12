@@ -14,3 +14,12 @@ def index(array, n):
         return -1
     else:
         return array[n]**n
+
+"""
+#good var
+def index(array, n):
+    try:
+        return array[n]**n
+    except:
+        return -1
+"""
