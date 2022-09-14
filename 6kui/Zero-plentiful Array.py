@@ -30,25 +30,23 @@ Examples
 #var 1
 
 def zero_plentiful(arr):
-    if 0 not in arr or arr.count(0) < 3:
-        return 0
+    if 0 not in arr or arr.count(0) < 3: return 0
     else:
-        counter = 0
-        i = 0
+        counter, i = 0, 0
         while i < len(arr):
             if arr[i] == 0:
                 if arr[i: i + 4].count(0) == 4:
-                    if len(set(arr[i:])) == 1: len0 = len(arr[i:])
-                    else: len0 = arr[i:].index(list(set(arr[i:]))[1])
-                    counter += len0 // 4
+                    if len(set(arr[i:])) == 1: len0 = len(arr[i:])  
+                    else: len0 = arr[i:].index(list(set(arr[i:]))[1])     
+                    counter += 1
                     i += len0
                 else:
                     return 0
-            else:
+            else:       
                 i += 1
         return counter
 """
 
-def zero_plentiful(a):
-    z = [len(w) for w in ''.join('0' if not e else ' ' for e in a).strip().split()]
-    return len(z) if z and min(z) >= 4 else 0
+def zero_plentiful(arr):
+    len0 = [len(j) for j in ''.join(['0' if not i else ' ' for i in arr]).split()]
+    return len(len0) if len0 and min(len0) >= 4 else 0
