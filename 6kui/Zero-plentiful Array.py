@@ -26,6 +26,9 @@ Examples
 """
 
 
+"""
+#var 1
+
 def zero_plentiful(arr):
     if 0 not in arr or arr.count(0) < 3:
         return 0
@@ -44,3 +47,8 @@ def zero_plentiful(arr):
             else:
                 i += 1
         return counter
+"""
+
+def zero_plentiful(a):
+    z = [len(w) for w in ''.join('0' if not e else ' ' for e in a).strip().split()]
+    return len(z) if z and min(z) >= 4 else 0
