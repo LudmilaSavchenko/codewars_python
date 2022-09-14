@@ -29,22 +29,18 @@ Examples
 def zero_plentiful(arr):
     if 0 not in arr or arr.count(0) < 3:
         return 0
-    elif arr.count(0) == len(arr):
-        return 1
     else:
         counter = 0
         i = 0
-
         while i < len(arr):
-            print(i, "i")
             if arr[i] == 0:
                 if arr[i: i + 4].count(0) == 4:
-                    counter += 1
-                    if len(arr[i:]) == arr[i:].count(0):
-                        return counter
-                    else:
-                        i += arr[i:].index(list(set(arr[i:]))[1])
+                    if len(set(arr[i:])) == 1: len0 = len(arr[i:])
+                    else: len0 = arr[i:].index(list(set(arr[i:]))[1])
+                    counter += len0 // 4
+                    i += len0
                 else:
                     return 0
             else:
                 i += 1
+        return counter
