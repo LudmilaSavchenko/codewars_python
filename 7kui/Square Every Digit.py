@@ -7,4 +7,4 @@ Note: The function accepts an integer and returns an integer
 """
 
 def square_digits(num):
-    return int(''.join([str(int(i) * int(i)) for i in str(num)]))
+    return int(''.join([str(int(i) ** 2) for i in str(num)]))
