@@ -18,6 +18,7 @@ Examples
 * Input: [2,2,1,2,1], output = [2,2,2,1]
 """
 
-def remove_smallest(num):
+def remove_smallest(numbers):
+    num = numbers[:]
     if num: num.remove((min(num)))
     return num
