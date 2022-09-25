@@ -13,6 +13,8 @@ For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should r
 
 """
 
+"""
+#var 1
 def count_positives_sum_negatives(arr):
     if arr:
         count = len([i for i in arr if i > 0])
@@ -20,3 +22,9 @@ def count_positives_sum_negatives(arr):
         return [count, summa]
     else:
         return []
+"""
+
+def count_positives_sum_negatives(arr):
+    count = len([i for i in arr if i > 0])
+    summa = sum([i for i in arr if i < 0])
+    return [count, summa] if arr else []
