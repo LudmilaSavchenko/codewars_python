@@ -21,6 +21,8 @@ If no button is currently active, return Nothing.
 If the list is empty, return Nothing.
 """
 
+"""
+#var 1
 def like_or_dislike(lst):
     result = "Nothing"
     for i in lst:
@@ -31,4 +33,12 @@ def like_or_dislike(lst):
         elif result == "Dislike":
             result = "Nothing" if i == "Dislike" else "Like"
     return result
+
+"""
+
+def like_or_dislike(lst):
+    state = 'Nothing'
+    for i in lst:
+        state = 'Nothing' if i == state else i
+    return state
 
