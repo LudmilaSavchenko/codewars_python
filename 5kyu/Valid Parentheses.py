@@ -22,4 +22,4 @@ def valid_parentheses(string):
     while '()' in string:
         string = string.replace('()', '')
 
-    return not bool(string)
+    return not string
