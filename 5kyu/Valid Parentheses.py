@@ -18,6 +18,7 @@ Along with opening (() and closing ()) parenthesis, input may contain any valid 
 
 
 def valid_parentheses(string):
+    string = ''.join([i for i in string if i in '()'])
     while '()' in string:
         string = string.replace('()', '')
 
