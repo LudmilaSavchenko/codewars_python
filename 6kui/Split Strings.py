@@ -10,8 +10,8 @@ Examples:
 """
 
 def solution(s):
-    if len(s) % 2 == 1: s += '_'
+    if len(s) % 2: s += '_'
     answer = []
     for i in range(0, len(s), 2):
-        answer.append(s[i: i + 2])
+        answer.append(s[i:i+2])
     return answer
