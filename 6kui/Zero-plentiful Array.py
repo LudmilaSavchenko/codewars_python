@@ -25,7 +25,6 @@ Examples
 # no zeros
 """
 
-
 """
 #var 1
 
